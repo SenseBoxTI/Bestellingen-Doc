@@ -1,0 +1,36 @@
+% leg hier de afwegingen die gedaan zijn uit over welke sensor gekozen is en waarom die.
+% bijvoorbeeld hij was leverbaar en viel binnen de meet-range en precisie die is verteld in de eigenschappen section of requirements
+In deze sectie wordt de verantwoording voor de verschillende gekozen sensoren uitgelicht. Als requirement moesten alle sensoren bestelbaar zijn via \href{https://nl.farnell.com}{Farnell}, \href{https://nl.mouser.com}{Mouser}, \href{https://nl.rs-components.com}{rs-components} of \href{https://kiwi-electronics.nl}{Kiwi-electronics}. Verder is het gewenst dat de sensor via I2C of analoog werkt en dat de sensor werkt op 3v3. 
+
+\subsection{MIX8410 - Zuurstof}
+\label{sec:mix}
+De MIX8410 is gekozen als O$_2$ sensor omdat deze een nauwkeurigheid heeft van 0.1\% een meetbereik heeft van 0 tot 25\% en een response time van minder dan 10 seconden. Verder is dit de enige sensor die op dit moment op de aangegeven sites bestelbaar is. 
+
+\subsection{AS7262 - licht spectrum}
+\label{sec:as}
+De AS7262 is gekozen als licht spectrum sensor. De sensor heeft 6 verschillende kanalen op verschillende golflengtes, tussen de 450nm en 650nm die allemaal een eigen kleur representeren, met een nauwkeurigheid van $\pm$12\%. De AS7262 kan worden aangesloten via I2C of UART en werkt op 3v3. Er is gekozen voor deze oplossing omdat uit de 5 verschillende golflengtes het soort kamer licht kan worden bepaald. 
+
+\subsection{Sensirion SCD30 - CO2, Hum, Temp}
+\label{sec:SCD30}
+
+De Sensirion SCD30 is een pcb met verschillende sensoren. Deze is gekozen voor zijn CO$_2$ sensor. Hiernaast beschikt de sensor over een luchtvochtigheid en temperatuur sensor. De CO$_2$ sensor heeft een meetbereik van 400-10000ppm met een nauwkeurigheid van $\pm$30ppm en kan een meeting doen elke 2 seconden. De luchtvochtigheid sensor kan tussen de 0\% en 100\%RH (Relative Humidity) meten met een nauwkeurigheid van $\pm$3\% en kan een meeting doen elke 8 seconden. De temperatuur sensor kan tussen de -40 en 70 graden C° met een nauwkeurigheid van $\pm$0.4 C° en kan een meeting doen elke 10 seconden. Doordat de sensor 3 verschillende attributen meet die allemaal binnen de gestelde meetbereik en nauwkeurigheid valt en eveneens ook bestelbaar is via één van de 4 beschikbare sites is deze sensor gekozen.\\
+
+De Sensirion SCD30's data wordt verder samen verwerkt met de Ambimate Sensor module's Temperatuur, en luchtvochtigheid's sensor gezien deze twee een vergelijkbare nauwkeurigheid hebben.
+
+\subsection{MAX4466 - Geluid}
+\label{sec:max}
+De MAX4466 sensor is gekozen als geluid sensor. Deze sensor is gekozen omdat op de sensor een ingebouwde versterkingsregelaar zit voor het versterken van het binnenkomend signaal. Verder is het signaal analoog dus kan de sensor continu worden uitgelezen. De sensor werkt op 3v3 waardoor geen interne conversie nodig is op het PCB. De microfoon kan tussen de 20 en 20000Hz ontvangen met een gevoeligheid van -44 $\pm$ 2dB. De frequentie kan verder worden omgezet naar dB via online beschikbare libraries. Hierdoor is het mogelijk om niet alleen de luidheid maar ook de toonhoogte te bepalen.
+
+\subsection{CCS811 - VOC, eCO2}
+\label{sec:mate}
+De CCS811 is een VOC sensor die gebruik maakt van I2C met een supply voltage van 3v3. Hiernaast heeft deze sensor ook een temperatuur en humidity nodig. De SCD30 beschikt hierover en  is hierom ook nodig om uit te kunnen lezen. De VOC sensor heeft een meetbereik tussen de 0-1187ppb. De eCO$_2$ wordt bepaald op basis van de VOC en heeft een meetbereik van 400-8192ppm. Vanwege de veel verschillende attributen die deze module kan meten en ook binnen de gestelde meetbereik en nauwkeurigheid valt, eveneens als beschikbaar via één van de 4 beschikbare sites is deze sensor gekozen. Deze sensor is ook gekozen omdat het kan worden gebruikt met de andere sensoren en deze sensor gebruikt ook I2C wat het aansluiten makkelijker maakt.\\
+
+\subsection{TSL2591 - licht intensiteit}
+\label{sec:TSL}
+De TSL2591 is gekozen als licht intensiteit sensor. De sensor kan tussen de 188\si{\micro Lux} en 88000\si{Lux}. Eveneens kan de TSL2591 ook infrarood en full-spectrum of human-visible light meten. De keuze voor de sensor is vanwege zijn grote meetbereik en het communicatie protocol; I2C op 3v3. Deze sensor is net zoals de andere ook beschikbaar op één van de aangegeven sites.
+
+\subsection{PMSA003I - fijnstof}
+\label{sec:smuart}
+De PMSA003I Laser Dust sensor is gekozen als fijnstof sensor. De sensor communiceert via I2C en heeft een 3v3 supply voltage nodig. Deze sensor is gekozen omdat deze beschikbaar is met een betaalbare prijs en gebruik maakt van I2C. De sensor kan tussen de 0.3\si{\micro\meter} en 10\si{\micro\meter} deeltjes meten. Verder heeft de sensor een meetbereik tussen de 1 en 999\si{\micro\gram\per\cubic\meter} en een nauwkeurigheid van 1\si{\micro\gram\per\cubic\meter}. De sensor heeft 5 seconden nodig om op te starten en kan daarna elke seconden worden uitgelezen.
+
+

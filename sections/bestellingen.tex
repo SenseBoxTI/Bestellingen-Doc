@@ -1,0 +1,62 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\hline
+\multicolumn{1}{|l|}{SensorID} & \multicolumn{1}{l|}{Sensornaam}       & \multicolumn{1}{l|}{Meet}                & \multicolumn{1}{l|}{Prijs (in euro, incl. BTW)} & \multicolumn{1}{l|}{Bestellink}                                                                                                                       \\ \hline
+\multicolumn{1}{|l|}{1}        & \multicolumn{1}{l|}{MIX8410}          & \multicolumn{1}{l|}{O2}                  & \multicolumn{1}{l|}{35,13}                      & \multicolumn{1}{l|}{\href{https://nl.mouser.com/ProductDetail/Seeed-Studio/101990680?qs=DPoM0jnrROWBX\%2FfANB1IYw\%3D\%3D}{Link}}                     \\ \hline
+\multicolumn{1}{|l|}{2}        & \multicolumn{1}{l|}{SCD30}            & \multicolumn{1}{l|}{CO2,   Hum, Temp}    & \multicolumn{1}{l|}{55,64}                      & \multicolumn{1}{l|}{\href{https://nl.rs-online.com/web/p/temperature-humidity-sensor-ics/1720552/}{Link}}                                             \\ \hline
+\multicolumn{1}{|l|}{3}        & \multicolumn{1}{l|}{MQ-7}             & \multicolumn{1}{l|}{CO}                  & \multicolumn{1}{l|}{6,14}                       & \multicolumn{1}{l|}{\href{https://nl.mouser.com/ProductDetail/474-SEN-09403}{Link}}                                                                   \\ \hline
+\multicolumn{1}{|l|}{4}        & \multicolumn{1}{l|}{TSL2591}          & \multicolumn{1}{l|}{Licht   intensiteit} & \multicolumn{1}{l|}{5,89}                       & \multicolumn{1}{l|}{\href{https://nl.mouser.com/ProductDetail/Adafruit/1980?qs=sGAEpiMZZMsKEdP9slC0YSnuTSFmm1LYraEQV\%252B1EsJM\%3D}{Link}}           \\ \hline
+\multicolumn{1}{|l|}{5}        & \multicolumn{1}{l|}{AS7262}           & \multicolumn{1}{l|}{Licht   spectrum}    & \multicolumn{1}{l|}{16,9}                       & \multicolumn{1}{l|}{\href{https://nl.mouser.com/ProductDetail/Adafruit/3779?qs=\%2Fha2pyFaduhIK8PZSZbRzZsXMtLLCRlN2lsYwgiwgTg\%}{Link}}               \\ \hline
+\multicolumn{1}{|l|}{6}        & \multicolumn{1}{l|}{CCS811}           & \multicolumn{1}{l|}{VOC}                 & \multicolumn{1}{l|}{23,95}                      & \multicolumn{1}{l|}{\href{https://www.kiwi-electronics.com/nl/adafruit-ccs811-air-quality-sensor-breakout-voc-eco2-3205?search=CCS811}{Link}}         \\ \hline
+\multicolumn{1}{|l|}{7}        & \multicolumn{1}{l|}{MAX4466}          & \multicolumn{1}{l|}{Geluid}              & \multicolumn{1}{l|}{8,25}                       & \multicolumn{1}{l|}{\href{https://nl.farnell.com/adafruit/1063/silicon-manufacturer-maxim-integrated/dp/2419156?st=MAX4466}{Link}}                    \\ \hline
+\multicolumn{1}{|l|}{8}        & \multicolumn{1}{l|}{PMSA003I}         & \multicolumn{1}{l|}{Fijnstof}            & \multicolumn{1}{l|}{52,95}                      & \multicolumn{1}{l|}{\href{https://www.kiwi-electronics.com/nl/adafruit-pmsa003i-air-quality-breakout-stemma-qt-qwiic-10427?search=PMSA003I\%20}{Link}} \\ \hline
+\end{tabular}
+\caption{Bestellijst sensoren}
+\label{tab:bestellijst}
+\end{table}
+
+De sensoren beschikken over de volgende elektrische eigenschappen
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        Naam & Protocol & Supply & Logic & Meet & Datasheet & shop  \\ \hline    
+        MIX8410 & analoog & 3-5v & 3v3  & O$_2$ & \href{https://nl.mouser.com/datasheet/2/744/MIX8410_Electrochemical_Oxygen_Gas_Sensor_V1_6-1903280.pdf}{Link} & \href{https://nl.mouser.com/ProductDetail/Seeed-Studio/101990680?qs=DPoM0jnrROWBX\%2FfANB1IYw\%3D\%3D}{Link} \\ \hline
+        Sensirion SCD30 & I2C, UART & 0.3V - 6.0V & 3.3v - 5.5v  & CO2, Hum, Temp & \href{https://docs.rs-online.com/2d49/0900766b816b6f9d.pdf}{Link} & \href{https://nl.rs-online.com/web/p/temperature-humidity-sensor-ics/1720552/}{Link} \\ \hline
+        TSL2591 & I2C & 3v3 & 3v3  & licht intensiteit & \href{https://nl.mouser.com/datasheet/2/737/TSL25911_Datasheet_EN_v1-2490266.pdf}{Link} & \href{https://nl.mouser.com/ProductDetail/Adafruit/1980?qs=sGAEpiMZZMsKEdP9slC0YSnuTSFmm1LYraEQV\%252B1EsJM\%3D}{Link} \\ \hline
+        AS7262 & I2C, UART & 3-5v & 3v3  & Light spectrum & \href{https://learn.adafruit.com/adafruit-as7262-6-channel-visible-light-sensor/overview}{Link} & \href{https://www.kiwi-electronics.nl/nl/adafruit-as7262-6-channel-visible-light-color-sensor-3575}{Link} \\ \hline
+        CS811 & I2C & 3v3 & 3v3  & VOC & \href{https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor}{Link} & \href{https://www.kiwi-electronics.com/nl/adafruit-ccs811-air-quality-sensor-breakout-voc-eco2-3205?search=CCS811}{Link} \\ \hline
+        MAX4466 & analog & 2.4-5.5v & 2.4-5.5V  & geluid & \href{https://datasheets.maximintegrated.com/en/ds/MAX4465-MAX4469.pdf}{Link} & \href{https://www.kiwi-electronics.nl/nl/elektretmicrofoon-versterker-max4466-met-instelbare-gain-806}{Link} \\ \hline
+        PMSA003I & I2C & 5v & 3v3  & Fijnstof & \href{hhttps://learn.adafruit.com/pmsa003i}{Link} & \href{https://www.kiwi-electronics.com/nl/adafruit-pmsa003i-air-quality-breakout-stemma-qt-qwiic-10427}{Link} \\ \hline
+    \end{tabular}
+    \caption{Elektrische eigenschappen van de sensoren}
+    \label{tab:eingeschappensensoren}
+\end{table}
+
+\newpage
+De sensoren beschikken over de volgende meet-limieten.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+SensorID & Meet              & Meetbereik        & Nauwkeurigheid & Herhaalbaarheid & Reactietijd       \\ \hline
+1        & O2                & 0-25\%            & 0.1            & ±2\%            & \textless{}10s    \\ \hline
+2        & CO2               & 0-40000ppm        & ±30ppm         & ±10ppm          & 20s               \\ \hline
+2        & Luchtvochtigheid  & 0\%RH - 100\%RH   & ±3\%RH         & ±0.1\%RH        & 8s                \\ \hline
+2        & Temperatuur       & -40-70°C          & ±0.4°C         & ±0.14°C         & \textgreater{}10s \\ \hline
+4        & Licht intensiteit & up to 88,000 uLux & 188 uLux       & -               & -                 \\ \hline
+5        & Licht spectrum    & 450-650nm         & -              & -               & -                 \\ \hline
+6        & Temp              & 5-50°C            & 1°C            & -               & 1s                \\ \hline
+6        & Luchtvochtigheid  & 5-95\%RH          & 3\%RH          & -               & 1s                \\ \hline
+6        & Lichtintensiteit  & 0-1024 lux        & -              & -               & 1s                \\ \hline
+6        & VOC               & 0-1187 ppb        & -              & -               & 60s               \\ \hline
+6        & eCO2              & 400-8192ppm       & -              & -               & 60s               \\ \hline
+6        & Microfoon         & -                 & -              & -               & \textless{}0.5s   \\ \hline
+6        & Beweging          & -                 & -              & -               & -                 \\ \hline
+7        & Geluid            & 200kHz            & -              & -               & -                 \\ \hline
+8        & Fijnstof          & PM2.5 output      & -              & -               & -                 \\ \hline
+\end{tabular}
+\caption{Meetbare eigenschappen, limieten en precisie}
+\label{tab:eigenschappen}
+\end{table}

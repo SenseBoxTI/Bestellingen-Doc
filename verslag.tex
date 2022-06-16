@@ -1,0 +1,92 @@
+% !TeX root = verslag.tex
+\documentclass{article}
+\usepackage[dutch]{babel}
+\usepackage{float}
+\usepackage{mwe}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[sorting=none]{biblatex}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{siunitx}
+\bibliography{bronnen.bib}
+\hypersetup{
+  colorlinks=true, % color links instead of border
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+\hypersetup{
+  colorlinks=true, % color links instead of border
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black,
+  citecolor=blue!50!black,
+  pdftitle={Sensebox_Documents},
+  pdfauthor={Joost Visser},
+  breaklinks=true
+}
+\newcommand{\contents} {
+  {
+    \hypersetup{hidelinks}
+    \tableofcontents
+  }
+  \clearpage
+}
+% Remove this in your fork if you are cool
+\usepackage{lipsum}
+
+% Yea, I got a bunch of custom styling, stored in ./style/ . It's all pretty, self explanatory.
+\input{style/page.tex}
+\input{style/header-footer.tex}
+\input{style/code-definitions.tex}
+
+\title{\LARGE{Bestellingen document}\\\normalsize{Wat is er besteld?}}
+\author{Joost Visser (628941@student.inholland.nl)}
+\date{\today}
+
+\begin{document}
+
+    % This is the first page of the document
+    % --------------------------------------
+    \maketitle
+    \vspace{8em}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=30em]{fotos/cover.jpg}
+        \caption[]{Bestellingen}
+    \end{figure}
+    \vfill
+    \newpage
+    % --------------------------------------
+
+    % Inhoudsopgave
+    \tableofcontents
+    \newpage
+
+    % To use codeblocks, write \begin{codeblock}{} \end{codeblock}
+    \input{functions/codeblock.tex}
+
+    % Here all the sections go. Stored in ./sections/
+    % --------------------------------------
+    \begin{flushleft}
+
+    \section{Sensoren}
+    \label{sec:Sensoren}
+    \input{sections/sensorInfo}
+      
+     \section{Bestellingen}
+     \label{sec:Bestellingen}
+     \input{sections/bestellingen.tex}
+%    \end{flushleft}
+    % --------------------------------------
+    % Sources at the end
+    \printbibliography
+
+    \iffalse
+    \section{geheime bedreiging}
+    Oja, nog even wat.
+    
+    \vspace{1em}
+    Als ik iemand ook maar 1 keer enter zie gebruiken, in plaats van gewoon inz een lange regel door schrijven. Dan wordt ik big sad, wen er aan. Zet word wrap aan. Idc. Wordt een goede latex gebruiker, enter heeft ook een functie namelijk
+    \fi
+
+\end{document}
