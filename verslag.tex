@@ -1,6 +1,7 @@
 % !TeX root = verslag.tex
 \documentclass{article}
 \usepackage[dutch]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{mwe}
 \usepackage{hyperref}
@@ -59,9 +60,7 @@
     % --------------------------------------
 
     % Inhoudsopgave
-    \tableofcontents
-    \newpage
-
+    \contents
     % To use codeblocks, write \begin{codeblock}{} \end{codeblock}
     \input{functions/codeblock.tex}
 
@@ -72,14 +71,18 @@
     \section{Sensoren}
     \label{sec:Sensoren}
     \input{sections/sensorInfo}
-      
+     
+    \section{Overige Onderdelen}
+    \label{sec:overige_onderdelen}
+    \input{sections/extra}
+
      \section{Bestellingen}
      \label{sec:Bestellingen}
      \input{sections/bestellingen.tex}
-%    \end{flushleft}
+    \end{flushleft}
     % --------------------------------------
     % Sources at the end
-    \printbibliography
+    % \printbibliography
 
     \iffalse
     \section{geheime bedreiging}
